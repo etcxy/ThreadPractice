@@ -4,7 +4,7 @@ public class Workshop {
     public static void main(String[] args) {
         Warehouse warehouse = new Warehouse("电脑");
 
-        Productor p = new Productor(warehouse);
+        Producer p = new Producer(warehouse);
         Consumer c = new Consumer(warehouse);
 
         new Thread(p, "p1").start();

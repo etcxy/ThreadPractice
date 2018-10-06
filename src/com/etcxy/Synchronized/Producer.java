@@ -1,10 +1,10 @@
 package com.etcxy.Synchronized;
 
-public class Productor implements Runnable{
+public class Producer implements Runnable{
 
     private Warehouse warehouse;
 
-    public Productor(Warehouse warehouse) {
+    public Producer(Warehouse warehouse) {
         this.warehouse = warehouse;
     }
 

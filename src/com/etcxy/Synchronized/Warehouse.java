@@ -24,14 +24,13 @@ public class Warehouse {
         notifyAll();
     }
 
-    public synchronized void pop()
-    {
+    public synchronized void pop() {
         while (!flag)
             try {
                 this.wait();
             } catch (InterruptedException e) {
             }
-        System.out.println(Thread.currentThread().getName() + "仓库出库:" + this.name + (count - 1));//消费烤鸭1
+        System.out.println(Thread.currentThread().getName() + "仓库出库:" + this.name + (count - 1));
         flag = false;
         notifyAll();
     }
